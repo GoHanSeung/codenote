@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CODE NOTE · 웹 기초 학습 노트</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&family=Nanum+Pen+Script&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="paper-cream lines-on hand-on read-md leading-md">
+
+  <!-- ===================== 화면 1 · 랜딩 ===================== -->
+  <section class="view view--landing is-active" id="view-landing">
+
+    <!-- 1-1. 히어로 -->
+    <div class="hero-screen" data-screen-label="Landing / Hero">
+      <header class="landing-top">
+        <div class="brand">
+          <span class="brand-clip"></span>
+          <span class="brand-name">CODE NOTE</span>
+        </div>
+        <span class="landing-tag">인터넷과 웹 기초 · 텀 프로젝트</span>
+      </header>
+
+      <div class="hero-mid">
+        <p class="hero-eyebrow">✏️ LEARN · CODING · PREVIEW</p>
+        <h1 class="hero-title" style="font-size: 94px">CODE NOTE</h1>
+        <h1 class="hero-title" style="font-size: 50px">직접 코딩하며 배우는 웹의 기초</h1>
+        <p class="hero-sub">HTML · CSS · JavaScript의 기본 개념 그대로.<br />이론을 읽고, 옆 칸에서 바로 코드를 써보세요.</p>
+
+        <div class="card-deck" id="cardDeck"></div>
+      </div>
+
+      <div class="scroll-hint" id="scrollHint">
+        <span>아래로 스크롤</span>
+        <span class="scroll-arrow">↓</span>
+      </div>
+    </div>
+
+    <!-- 1-1.5 브랜드 소개 -->
+    <section class="story story--brand" data-screen-label="Landing / 브랜드">
+      <div class="story-inner">
+        <p class="story-kicker reveal" data-reveal>ABOUT · 이 노트는</p>
+        <div class="brand-hero reveal" data-reveal>
+          <span class="brand-clip brand-clip--lg"></span>
+          <h2 class="brand-wordmark">CODE NOTE</h2>
+        </div>
+        <p class="story-lead reveal" data-reveal><span class="pen-hl">코드(CODE)</span>를 직접 써보며 정리하는 <span class="pen-hl">노트(NOTE)</span>.<br />개념을 읽고 끝나는 강의가 아니라, 개념을 익히는 웹페이지 언어 기초 학습 노트입니다.</p>
+
+        <div class="brand-grid">
+          <div class="brand-card reveal" data-reveal>
+            <span class="brand-card-ico">📎</span>
+            <h3>로고의 의미</h3>
+            <p>노트를 집는 <strong>집게(클립)</strong> 모양입니다. 살짝 기울어진 클립이 공책에 끼운 것처럼 보이도록 그려, '필기·기록'이라는 정체성을 한눈에 전합니다.</p>
+          </div>
+          <div class="brand-card reveal" data-reveal>
+            <span class="brand-card-ico">✏️</span>
+            <h3>이름의 의미</h3>
+            <p><strong>CODE</strong>(코드) + <strong>NOTE</strong>(노트). 보기만 하는 자료가 아니라 <strong>직접 써보는 코딩 학습 노트</strong>라는 뜻을 담았습니다.</p>
+          </div>
+          <div class="brand-card reveal" data-reveal>
+            <span class="brand-card-ico">📒</span>
+            <h3>디자인 컨셉</h3>
+            <p>줄선 종이, 손글씨 글씨체, 마스킹 테이프로 붙인 카드, 떠다니는 메모장 등 <strong>'공책에 필기하듯'</strong><br>따뜻한 페이퍼 감성으로 통일했습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1-2. 기획 의도 -->
+    <section class="story story--intent" data-screen-label="Landing / 기획의도">
+      <div class="story-inner">
+        <p class="story-kicker reveal" data-reveal>WHY · 기획 의도</p>
+        <h2 class="story-title reveal" data-reveal>왜 이 노트를 만들었을까요?</h2>
+        <p class="story-lead reveal" data-reveal>한 학기가 지나고 나면 <span class="pen-hl">배운 것이 금방 잊혀지는</span> 경험, 다들 있지 않으신가요?<br />그 고민에서 이 노트가 시작됐습니다.</p>
+
+        <div class="intent-grid">
+          <div class="intent-card reveal" data-reveal>
+            <span class="intent-num">01</span>
+            <h3>배운 내용이 금방 잊혀진다</h3>
+            <p>한 학기가 지나면 공들여 배운 내용이 잊혀집니다. → 인터넷과 웹 기초에서 배운 핵심을 <strong><br>언제든 다시 볼 수 있도록</strong> 정리했습니다.</p>
+          </div>
+          <div class="intent-card reveal" data-reveal>
+            <span class="intent-num">02</span>
+            <h3>VS Code 없이도 연습하고 싶다</h3>
+            <p>VS Code가 없는 환경에서는 코드 연습이 어렵습니다. → 시험 기간이나 외출 중에도 <strong>휴대폰·태블릿 브라우저</strong>만으로 HTML·CSS·JS를 바로 써볼 수 있도록 했습니다.</p>
+          </div>
+          <div class="intent-card reveal" data-reveal>
+            <span class="intent-num">03</span>
+            <h3>나만이 아닌, 모두를 위해</h3>
+            <p>이 노트가 혼자만의 복습 도구로 끝나지 않으면 좋겠다고 생각했습니다. → <strong>같은 수업을 듣는 수강생분들</strong>과 HTML을 처음 접하는 분들에게도 작은 도움이 되길 바랍니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1-3. 구성 & 사용법 -->
+    <section class="story story--how" data-screen-label="Landing / 구성">
+      <div class="story-inner">
+        <p class="story-kicker reveal" data-reveal>HOW · 이렇게 구성했어요</p>
+        <h2 class="story-title reveal" data-reveal>노트의 구성과 사용법</h2>
+
+        <div class="how-grid">
+          <div class="how-card reveal" data-reveal>
+            <span class="how-ico">📚</span>
+            <h3>언어별 학습 트랙</h3>
+            <p>HTML, CSS, JavaScript 세 갈래. 카드를 누르면 해당 언어의 학습<br> 노트가 펼쳐집니다.</p>
+          </div>
+          <div class="how-card reveal" data-reveal>
+            <span class="how-ico">🔖</span>
+            <h3>고정 목차 (TOC)</h3>
+            <p>왼쪽 목차는 스크롤해도 늘 제자리. 클릭하면 본문이 해당 단원으로 슉 이동합니다.</p>
+          </div>
+          <div class="how-card reveal" data-reveal>
+            <span class="how-ico">⚡</span>
+            <h3>실시간 코드 에디터</h3>
+            <p>오른쪽 에디터에 코드를 치면 아래 미리보기가 즉시 갱신. HTML·CSS·JS 탭을 오가며 실습.</p>
+          </div>
+          <div class="how-card reveal" data-reveal>
+            <span class="how-ico">📈</span>
+            <h3>진도율 추적</h3>
+            <p>읽은 단원만큼 상단 진도율 바가 채워지고, 목차에 체크 표시가 남습니다.</p>
+          </div>
+        </div>
+
+        <div class="screen-tour reveal" data-reveal>
+          <p class="tour-lead">실제 학습 페이지는 이렇게 구성돼 있어요 👀</p>
+
+          <figure class="cap-figure">
+            <div class="cap-frame">
+              <div class="cap-bar"><span class="cap-dot"></span><span class="cap-dot"></span><span class="cap-dot"></span><span class="cap-bar-url">code-note · HTML 학습 페이지</span></div>
+              <div class="cap-shot">
+                <img src="assets/guide/learn-page.png" alt="실제 학습 페이지 화면 구성 캡처" loading="lazy" />
+                <span class="cap-pin" style="left:3.2%;top:2.3%">1</span>
+                <span class="cap-pin" style="left: 21.8%; top: 2.3%; background-color: rgb(214, 106, 6)">2</span>
+                <span class="cap-pin" style="left: 92.5%; top: 2.3%; background-color: rgb(241, 192, 28)">3</span>
+                <span class="cap-pin" style="left:5%;top:12%">4</span>
+                <span class="cap-pin" style="left: 27%; top: 14%; background-color: rgb(43, 175, 241)">5</span>
+                <span class="cap-pin" style="left:53%;top:9%">6</span>
+                <span class="cap-pin" style="left:53%;top:58%">7</span>
+              </div>
+            </div>
+
+            <figcaption class="cap-legend" style="opacity: 1; width: 720px">
+              <span class="cap-item"><b style="border-width: 2px 2px 0px 0px; border-style: solid">1</b> 홈으로 — 언어 선택 화면으로 돌아가기</span>
+              <span class="cap-item"><b style="border-width: 2px; border-style: solid; background-color: rgb(214, 106, 6)">2</b> 메모장 — 떠다니는 메모 열기/닫기</span>
+              <span class="cap-item"><b style="border-width: 2px; border-style: solid; background-color: rgb(241, 192, 28)">3</b> 진도율 — 읽은 단원만큼 채워지는 바</span>
+              <span class="cap-item"><b style="background-color: rgb(63, 157, 109); border-width: 2px; border-style: solid">4</b> 고정 목차 — 스크롤해도 제자리, 클릭 시 이동</span>
+              <span class="cap-item"><b style="border-width: 2px; border-style: solid; background-color: rgb(43, 175, 241)">5</b> 학습 본문 — 강의 순서대로 읽는 노트</span>
+              <span class="cap-item"><b style="background-color: rgb(43, 102, 196); border-width: 2px; border-style: solid">6</b> 코드 에디터 — HTML·CSS·JS 탭, 복사 버튼</span>
+              <span class="cap-item"><b style="background-color: rgb(122, 92, 196); border-width: 2px 2px 2px 0px; border-style: solid">7</b> Live Server 미리보기 — 입력 즉시 실시간 결과</span>
+            </figcaption>
+          </figure>
+
+          <div class="tour-mini">
+            <div class="tour-mini-card">
+              <span class="tmc-n">①</span>
+              <p><strong>언어 선택</strong><br />HTML·CSS·JS·실습문제 중 하나를 고릅니다.</p>
+            </div>
+            <span class="tmc-arrow">→</span>
+            <div class="tour-mini-card">
+              <span class="tmc-n">②</span>
+              <p><strong>읽으며 학습</strong><br />목차를 따라 본문을 읽고 진도율을 채웁니다.</p>
+            </div>
+            <span class="tmc-arrow">→</span>
+            <div class="tour-mini-card">
+              <span class="tmc-n">③</span>
+              <p><strong>직접 코딩</strong><br />오른쪽 에디터에서 <br>바로 코드를 실행해 봅니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-cta reveal" data-reveal>
+          <button class="cta-btn" id="ctaTop" type="button">맨 위로 올라가 언어 고르기 ↑</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="landing-foot">
+      <div class="foot-brand">
+        <span class="brand-clip"></span>
+        <span class="foot-name">CODE NOTE</span>
+      </div>
+      <div class="foot-maker">
+        <p class="foot-maker-name" style="font-family: &quot;Gowun Dodum&quot;">만든이 · <strong style="font-family: &quot;Gowun Dodum&quot;">고한승</strong></p>
+        <p class="foot-maker-line">Email · <a href="mailto:rhgkstmd208@pusan.ac.kr">rhgkstmd208@pusan.ac.kr</a></p>
+        <p class="foot-maker-line">(46241) 부산광역시 금정구 부산대학로 63번길 2</p>
+      </div>
+      <div class="foot-meta">
+        <span class="foot-copy" style="font-family: &quot;Gowun Dodum&quot;">© 2026 고한승. All rights reserved.</span>
+        <span class="foot-course">인터넷과 웹 기초 · 텀 프로젝트</span>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ===================== 화면 2 · 학습 페이지 ===================== -->
+  <section class="view view--learn" id="view-learn">
+    <header class="topbar">
+      <button class="home-btn" id="homeBtn" type="button"><span class="home-arrow">←</span> 홈으로</button>
+      <div class="topbar-title">
+        <span class="lang-chip" id="langChip">HTML</span>
+        <span class="lang-name" id="langName">HyperText Markup Language</span>
+      </div>
+      <button class="memo-toggle" id="memoToggle" type="button" title="메모장 열기/닫기">📝 메모장</button>
+      <div class="progress-wrap">
+        <span class="progress-label">진도율</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <span class="progress-pct" id="progressPct">0%</span>
+      </div>
+    </header>
+
+    <div class="learn-body">
+      <section class="learn-left">
+        <nav class="toc" id="toc" aria-label="학습 목차">
+          <p class="toc-head">목차 · CONTENTS</p>
+          <ul class="toc-list" id="tocList"></ul>
+          <div class="toc-foot"><span class="toc-foot-dot"></span><span id="tocFootText">스크롤하며 학습</span></div>
+        </nav>
+        <div class="content-box" id="contentBox">
+          <div class="content-scroll" id="contentScroll">
+            <article class="content" id="content"></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="learn-right">
+        <div class="editor-pane">
+          <div class="editor-tabs" id="editorTabs">
+            <button class="etab is-active" data-tab="html" type="button">HTML</button>
+            <button class="etab" data-tab="css" type="button">CSS</button>
+            <button class="etab" data-tab="js" type="button">JS</button>
+            <div class="editor-actions">
+              <button class="ebtn" id="resetBtn" type="button">초기화</button>
+              <button class="ebtn ebtn--run" id="copyBtn" type="button">📋 코드 복사</button>
+            </div>
+          </div>
+          <div class="editor-stack">
+            <textarea class="code-area is-active" id="code-html" spellcheck="false" data-tab="html"></textarea>
+            <textarea class="code-area" id="code-css" spellcheck="false" data-tab="css"></textarea>
+            <textarea class="code-area" id="code-js" spellcheck="false" data-tab="js"></textarea>
+          </div>
+        </div>
+        <div class="preview-pane">
+          <div class="preview-head">
+            <span class="preview-dots"><i></i><i></i><i></i></span>
+            <span class="preview-url">Open with Live Server</span>
+            <span class="preview-live">● LIVE</span>
+          </div>
+          <iframe class="preview-frame" id="previewFrame" title="실시간 미리보기"></iframe>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ===================== 화면 3 · 실습문제 연습 ===================== -->
+  <section class="view view--practice" id="view-practice">
+    <header class="topbar">
+      <button class="home-btn" id="homeBtnP" type="button"><span class="home-arrow">←</span> 홈으로</button>
+      <div class="topbar-title">
+        <span class="lang-chip" id="practiceChip">실습</span>
+        <span class="lang-name">강의자료 실습문제 연습</span>
+      </div>
+      <div class="practice-filter" id="practiceFilter">
+        <button class="pf-btn is-active" data-filter="all" type="button">전체</button>
+        <button class="pf-btn" data-filter="html" type="button">HTML</button>
+        <button class="pf-btn" data-filter="css" type="button">CSS</button>
+        <button class="pf-btn" data-filter="js" type="button">JS</button>
+      </div>
+    </header>
+
+    <div class="learn-body">
+      <section class="learn-left">
+        <nav class="toc" id="practiceToc" aria-label="실습문제 목록">
+          <p class="toc-head">문제 · PROBLEMS</p>
+          <ul class="toc-list" id="practiceList"></ul>
+          <button class="add-problem-btn" id="addProblemBtn" type="button">➕ 새 문제 만들기</button>
+          <div class="toc-foot"><span class="toc-foot-dot"></span><span id="practiceSolved">0개 해결</span></div>
+        </nav>
+        <div class="content-box" id="practiceBox">
+          <div class="content-scroll" id="practiceScroll">
+            <article class="content content--practice" id="practiceContent"></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="learn-right">
+        <div class="editor-pane">
+          <div class="editor-tabs" id="practiceTabs">
+            <button class="etab is-active" data-ptab="html" type="button">HTML</button>
+            <button class="etab" data-ptab="css" type="button">CSS</button>
+            <button class="etab" data-ptab="js" type="button">JS</button>
+            <div class="editor-actions">
+              <button class="ebtn" id="pResetBtn" type="button">처음으로</button>
+              <button class="ebtn" id="pCopyBtn" type="button">📋 복사</button>
+              <button class="ebtn" id="pMineBtn" type="button">✏️ 내 코드</button>
+              <button class="ebtn ebtn--run" id="pSolutionBtn" type="button">💡 정답 보기</button>
+            </div>
+          </div>
+          <div class="editor-stack">
+            <textarea class="code-area is-active" id="pcode-html" spellcheck="false" data-ptab="html"></textarea>
+            <textarea class="code-area" id="pcode-css" spellcheck="false" data-ptab="css"></textarea>
+            <textarea class="code-area" id="pcode-js" spellcheck="false" data-ptab="js"></textarea>
+          </div>
+        </div>
+        <div class="preview-pane">
+          <div class="preview-head">
+            <span class="preview-dots"><i></i><i></i><i></i></span>
+            <span class="preview-url">내 코드 결과 · preview</span>
+            <span class="preview-live">● LIVE</span>
+          </div>
+          <iframe class="preview-frame" id="pPreviewFrame" title="실습 미리보기"></iframe>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ===================== 설정 ===================== -->
+  <button class="tweak-fab" id="tweakFab" type="button" title="노트 설정">⚙</button>  <aside class="tweak-panel" id="tweakPanel" aria-label="노트 설정">
+    <div class="tweak-head">
+      <span>✏️ 노트 설정</span>
+      <button class="tweak-close" id="tweakClose" type="button">✕</button>
+    </div>
+    <div class="tweak-body">
+
+      <div class="tweak-row">
+        <label>종이 색</label>
+        <div class="swatches" data-tweak="paper">
+          <button class="swatch sw-cream is-active" data-val="paper-cream" title="크림"></button>
+          <button class="swatch sw-white" data-val="paper-white" title="화이트"></button>
+          <button class="swatch sw-mint" data-val="paper-mint" title="민트"></button>
+          <button class="swatch sw-grid" data-val="paper-grid" title="모눈"></button>
+        </div>
+      </div>
+
+      <div class="tweak-row">
+        <label>본문 글자 크기 <span class="tweak-hint" id="readVal">16px</span></label>
+        <input type="range" class="tweak-range" id="readRange" min="13" max="26" step="1" value="16" />
+      </div>
+
+      <div class="tweak-row">
+        <label>코드 글자 크기 <span class="tweak-hint" id="codeVal">13px</span></label>
+        <input type="range" class="tweak-range" id="codeRange" min="11" max="22" step="1" value="13" />
+      </div>
+
+      <div class="tweak-row">
+        <label>메모장 글자 크기 <span class="tweak-hint" id="memoVal">14px</span></label>
+        <input type="range" class="tweak-range" id="memoRange" min="12" max="24" step="1" value="14" />
+      </div>
+
+      <div class="tweak-row tweak-toggle">
+        <label>노트 줄선 표시</label>
+        <button class="toggle is-on" data-tweak="lines" data-on="lines-on" data-off="lines-off"><span></span></button>
+      </div>
+
+      <div class="tweak-row tweak-toggle">
+        <label>손글씨 제목</label>
+        <button class="toggle is-on" data-tweak="hand" data-on="hand-on" data-off="hand-off"><span></span></button>
+      </div>
+
+      <button class="tweak-reset" id="tweakReset" type="button">기본값으로 초기화</button>
+    </div>
+  </aside>
+
+  <!-- ===================== 메모장 ===================== -->
+  <div class="memo-pad" id="memoPad" aria-label="메모장">
+    <div class="memo-head" id="memoHead">
+      <span class="memo-title">📝 메모장</span>
+      <div class="memo-actions">
+        <button class="memo-btn" id="memoCopy" type="button" title="내용 복사">📋</button>
+        <button class="memo-btn" id="memoClose" type="button" title="닫기">✕</button>
+      </div>
+    </div>
+    <textarea class="memo-text" id="memoText" spellcheck="false" placeholder="배운 내용·아이디어를 자유롭게 적어두세요.&#10;페이지를 옮기거나 새로고침해도 사라지지 않아요!"></textarea>
+  </div>
+
+  <!-- ===================== 새 문제 만들기 ===================== -->
+  <div class="modal-overlay" id="problemModal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <span>✏️ 새 실습문제 만들기</span>
+        <button class="modal-close" id="problemModalClose" type="button">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="field-row">
+          <div class="field"><label>문제 제목</label><input type="text" id="np-title" placeholder="예) 내 프로필 카드 만들기" /></div>
+          <div class="field field--lang"><label>언어</label>
+            <select id="np-lang"><option value="html">HTML</option><option value="css">CSS</option><option value="js">JavaScript</option></select>
+          </div>
+        </div>
+        <div class="field"><label>목표 <span class="field-hint">한 줄 요약</span></label><input type="text" id="np-goal" placeholder="예) flexbox로 가로 정렬하기" /></div>
+        <div class="field"><label>미션 설명</label><textarea id="np-mission" rows="2" placeholder="무엇을 만들어야 하는지 설명하세요."></textarea></div>
+        <div class="field"><label>힌트</label><input type="text" id="np-hint" placeholder="예) display:flex 를 사용해 보세요." /></div>
+        <div class="code-fields">
+          <div class="cf-col">
+            <p class="cf-title">🟦 시작 코드 <span class="field-hint">학생이 처음 보는 코드</span></p>
+            <label class="cf-lab">HTML</label><textarea id="np-s-html" rows="2" spellcheck="false"></textarea>
+            <label class="cf-lab">CSS</label><textarea id="np-s-css" rows="2" spellcheck="false"></textarea>
+            <label class="cf-lab">JS</label><textarea id="np-s-js" rows="2" spellcheck="false"></textarea>
+          </div>
+          <div class="cf-col">
+            <p class="cf-title">🟩 정답 코드 <span class="field-hint">💡 정답 보기로 표시</span></p>
+            <label class="cf-lab">HTML</label><textarea id="np-a-html" rows="2" spellcheck="false"></textarea>
+            <label class="cf-lab">CSS</label><textarea id="np-a-css" rows="2" spellcheck="false"></textarea>
+            <label class="cf-lab">JS</label><textarea id="np-a-js" rows="2" spellcheck="false"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <span class="modal-note">📦 이 브라우저에 저장되어 새로고침해도 유지됩니다.</span>
+        <div class="modal-foot-btns">
+          <button class="mbtn" id="problemCancel" type="button">취소</button>
+          <button class="mbtn mbtn--save" id="problemSave" type="button">문제 추가하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
